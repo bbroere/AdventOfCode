@@ -4,7 +4,7 @@ import re
 
 def part_1(filename: str) -> int:
     # split input
-    instructions, *nodes = re.sub('\n+', '\n', open(filename, "r").read()).split('\n')
+    instructions, *nodes = re.sub('\n+', '\n', open(filename, "r").read()).splitlines()
     # create nodes
     nodes = list(map(lambda t: (t[:3], t[7:10], t[12:15]), nodes))
     # running results
@@ -26,7 +26,7 @@ def part_1(filename: str) -> int:
 # Same solution as pt 1 would not terminate within a week probably, so going for cycles
 def part_2(filename: str) -> int:
     # split input
-    instructions, *nodes = re.sub('\n+', '\n', open(filename, "r").read()).split('\n')
+    instructions, *nodes = re.sub('\n+', '\n', open(filename, "r").read()).splitlines()
     # create nodes
     nodes = list(map(lambda t: (t[:3], t[7:10], t[12:15]), nodes))
     # determine all starting nodes
@@ -65,7 +65,7 @@ def part_2(filename: str) -> int:
                 if running_path_length is None:
                     running_path_length = current
                 else:
-                    running_path_length = least_common_multiple(current, running_path_length)
+                    running_path_length = math.lcm(current, running_path_length)
                 # break from the while True
                 break
 
@@ -78,8 +78,3 @@ def part_2(filename: str) -> int:
 
     # no post-processing needed!
     return running_path_length
-
-
-# determine the least common multiple using GCD (a, b) = (a × b)/ LCM (a, b)
-def least_common_multiple(lhs: int, rhs: int) -> int:
-    return math.floor(lhs * rhs / math.gcd(lhs, rhs))

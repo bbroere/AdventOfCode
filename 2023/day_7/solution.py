@@ -1,6 +1,6 @@
 def part_1(filename: str) -> int:
     # read the hands and bids
-    lines = open(filename, "r").read().split('\n')
+    lines = open(filename).read().splitlines()
     # keep transforming array
     hands_with_score = []
     for line in lines:
@@ -50,7 +50,7 @@ def part_1(filename: str) -> int:
 
 def part_2(filename: str) -> int:
     # read the hands and bids
-    lines = open(filename, "r").read().split('\n')
+    lines = open(filename).read().splitlines()
     # keep transforming array
     hands_with_score = []
     for line in lines:

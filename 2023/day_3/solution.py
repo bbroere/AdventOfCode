@@ -1,5 +1,5 @@
 def part_1(filename: str) -> int:
-    lines = open(filename, "r").read().split('\n')
+    lines = open(filename).read().splitlines()
     # keep running total
     res = 0
     # loop over lines as index
@@ -29,7 +29,7 @@ def part_1(filename: str) -> int:
 
 
 def part_2(filename: str) -> int:
-    lines = open(filename, "r").read().split('\n')
+    lines = open(filename).read().splitlines()
     # keep running total
     res = 0
     # determine gear locations and set ration to 1

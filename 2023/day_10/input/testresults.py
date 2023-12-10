@@ -1,2 +1,2 @@
-testdata_1_result = None
-testdata_2_result = None
+testdata_1_result = 8
+testdata_2_result = 10

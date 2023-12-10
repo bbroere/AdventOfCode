@@ -2,7 +2,7 @@ def part_1(filename: str) -> int:
     # split input into seeds and maps
     seeds, *maps = open(filename, 'r').read().split('\n\n')
     seeds = [int(x) for x in seeds.split(': ')[1].split()]
-    maps = list(map(lambda t: list(map(lambda tt: [int(x) for x in tt.split()], t.split('\n')[1:])), maps))
+    maps = list(map(lambda t: list(map(lambda tt: [int(x) for x in tt.split()], t.splitlines()[1:])), maps))
     # running result
     res = []
     # loop over seeds
@@ -32,7 +32,7 @@ def part_2(filename: str) -> int:
     seeds = [int(x) for x in seeds.split(': ')[1].split()]
     # split into ranges
     seeds = [(seeds[i], seeds[i] + seeds[i + 1]) for i in range(0, int(len(seeds)), 2)]
-    maps = list(map(lambda t: list(map(lambda tt: [int(x) for x in tt.split()], t.split('\n')[1:])), maps))
+    maps = list(map(lambda t: list(map(lambda tt: [int(x) for x in tt.split()], t.splitlines()[1:])), maps))
     # set origins to seeds initially
     origins = seeds
     # loop over maps

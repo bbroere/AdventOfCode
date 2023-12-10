@@ -3,7 +3,7 @@ import math
 
 def part_1(filename: str) -> int:
     # split it up
-    times, distances = open(filename, "r").read().split('\n')
+    times, distances = open(filename).read().splitlines()
     times = [int(x) for x in times.split()[1:]]
     distances = [int(x) for x in distances.split()[1:]]
     # running result
@@ -28,7 +28,7 @@ def part_1(filename: str) -> int:
 # actually simpler than part 1 if you math :)
 def part_2(filename: str) -> int:
     # get race time and distance
-    time, distance = open(filename, "r").read().split('\n')
+    time, distance = open(filename).read().splitlines()
     time = int("".join(time.split()[1:]))
     distance = int("".join(distance.split()[1:]))
     # minimum winning holding time is determined by abc-formula

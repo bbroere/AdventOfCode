@@ -1,5 +1,5 @@
 def part_1(filename: str) -> int:
-    lines = open(filename, "r").read().split('\n')
+    lines = open(filename).read().splitlines()
     # running result
     res = 0
     # loop over all lines as history
@@ -22,7 +22,7 @@ def part_1(filename: str) -> int:
 
 # Same as part one except just swap the array as operation is symmetric
 def part_2(filename: str) -> int:
-    lines = open(filename, "r").read().split('\n')
+    lines = open(filename).read().splitlines()
     # running result
     res = 0
     # loop over all lines as history
