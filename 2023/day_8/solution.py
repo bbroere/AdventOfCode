@@ -24,6 +24,7 @@ def part_1(filename: str) -> int:
 
 
 # Same solution as pt 1 would not terminate within a week probably, so going for cycles
+# Kudos to hyper-neutrino for the python tricks (https://github.com/hyper-neutrino)
 def part_2(filename: str) -> int:
     # split input
     instructions, *nodes = re.sub('\n+', '\n', open(filename, "r").read()).splitlines()

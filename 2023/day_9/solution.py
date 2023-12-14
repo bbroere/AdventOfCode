@@ -1,3 +1,4 @@
+# Kudos to hyper-neutrino for the python tricks (https://github.com/hyper-neutrino)
 def part_1(filename: str) -> int:
     lines = open(filename).read().splitlines()
     # running result

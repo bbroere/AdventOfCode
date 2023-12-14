@@ -15,7 +15,7 @@ if test_solution_1 == testdata_1_result and test_solution_1 is not None:
     start_part_1 = time.time()
     sol_1 = part_1('input/input.txt')
     end_part_1 = time.time()
-    print(f"Own solution should be {sol_1} ({'%.3f' % (end_part_1 - start_part_1)}s)")  # ???
+    print(f"Own solution should be {sol_1} ({'%.3f' % (end_part_1 - start_part_1)}s)")  # 8419
 else:
     print(f"Part 1 unsuccessful, expected {testdata_1_result}, got {test_solution_1}")
 
@@ -32,6 +32,6 @@ if test_solution_2 == testdata_2_result and test_solution_2 is not None:
     start_part_2 = time.time()
     sol_2 = part_2('input/input.txt')
     end_part_2 = time.time()
-    print(f"Own solution should be {sol_2} ({'%.3f' % (end_part_2 - start_part_2)}s)")  # ???
+    print(f"Own solution should be {sol_2} ({'%.3f' % (end_part_2 - start_part_2)}s)")  # 160500973317706
 else:
     print(f"Part 2 unsuccessful, expected {testdata_2_result}, got {test_solution_2}")

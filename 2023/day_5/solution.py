@@ -1,3 +1,4 @@
+# Kudos to hyper-neutrino for the python tricks (https://github.com/hyper-neutrino)
 def part_1(filename: str) -> int:
     # split input into seeds and maps
     seeds, *maps = open(filename, 'r').read().split('\n\n')
