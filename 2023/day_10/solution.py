@@ -1,6 +1,7 @@
 from collections import deque
 
 
+# Kudo's to hyper-neutrino for the python knowledge (https://github.com/hyper-neutrino)
 def part_1(filename: str) -> int:
     grid = open(filename).read().splitlines()
     # first find start
